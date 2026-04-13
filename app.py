@@ -16,6 +16,3 @@ if uploaded_file is not None:
     st.subheader("📋 Data Info")
     st.write(df.describe())
     st.subheader("📈 Recovery Rate Analysis")
-
-recovery_rate = df.groupby("arm")["outcome"].value_counts(normalize=True) * 100
-st.write(recovery_rate)
